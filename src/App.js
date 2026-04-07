@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import {Routes, Route } from 'react-router-dom';
 import './App.css';
+import IndividualPostPage from './components/IndividualPostPage';
+import ContactPage from './components/ContactPage';
+import BlogPostsPage from './components/BlogPostsPage';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import { ThemeProvider } from './components/ThemeContext';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+  <>
+  <ThemeProvider>
+    <Routes>
+        <Route path="/post/:id" element={<IndividualPostPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/" element={<BlogPostsPage />} />
+    </Routes>
+  </ThemeProvider>
+  </>
+);
 }
 
 export default App;
