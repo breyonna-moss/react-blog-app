@@ -39,9 +39,9 @@ const posts = [
     const [post, setPost] = useState(null);
     const [user, setUser] = useState(null);
     const [comments, setComments] = useState([]);
-    const [_error, setError] = useState(null);
-    const [_commentError, setCommentError] = useState(null);
-    const [_loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [commentError, setCommentError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
 
     const { id } = useParams();
@@ -83,6 +83,9 @@ const posts = [
     }, [id]);
   
     if (!post) return <h2 className='not-found'>Loading...</h2>;
+    if (loading) return <h2>Loading...</h2>;
+    if (error) return <h2>{error}</h2>;
+
 
     const addComment = (commentData) => {
       const { name, body } = commentData;
@@ -113,6 +116,7 @@ const posts = [
         <div className='comment-section'>
           <h3 className="comm-header">Comments</h3>
           <div className='comm-list'><CommentsList comments={comments} /></div>
+          {commentError && <p className="error">{commentError}</p>}
           <div className='comm-form'><CommentForm addComment={addComment} /></div>
         </div>
         <Footer/>
