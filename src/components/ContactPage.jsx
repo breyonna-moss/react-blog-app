@@ -1,7 +1,7 @@
-import { useState } from "react";
+//import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import ThemeSwitcher from "./ThemeSwitcher";
+//import ThemeSwitcher from "./ThemeSwitcher";
 // <h1 className="contact-header">Contact Us</h1>
 //      <ThemeSwitcher></ThemeSwitcher>
 

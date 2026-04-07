@@ -39,9 +39,10 @@ const posts = [
     const [post, setPost] = useState(null);
     const [user, setUser] = useState(null);
     const [comments, setComments] = useState([]);
-    const [error, setError] = useState(null);
-    const [commentError, setCommentError] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [_error, setError] = useState(null);
+    const [_commentError, setCommentError] = useState(null);
+    const [_loading, setLoading] = useState(true);
+
 
     const { id } = useParams();
     

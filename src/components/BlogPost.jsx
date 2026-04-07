@@ -1,5 +1,4 @@
 
-import Icons from './Icons';
 
 function BlogPost(props){
 

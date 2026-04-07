@@ -3,7 +3,6 @@ import './App.css';
 import IndividualPostPage from './components/IndividualPostPage';
 import ContactPage from './components/ContactPage';
 import BlogPostsPage from './components/BlogPostsPage';
-import ThemeSwitcher from './components/ThemeSwitcher';
 import { ThemeProvider } from './components/ThemeContext';
 
 
